@@ -1,10 +1,10 @@
 :root{
-  --purple: #A020F0;
-  --zincwhite: #FDF8FF;
-  --thistle: #CDB5CD;
-  --bubblegum: #FF92BB;
-  --hotpink: #EE6AA7;
-  --orchid: #7A378B;
+  --mediumpurple: #663a82;
+  --purple: #52307c;
+  --graypurple: #7c5295;
+  --lightpurple: #b491c8;
+  --palepurple: #d4beee;
+  --orchid: #3c1361;
 }
 
 body {
@@ -17,37 +17,31 @@ body {
 
 textarea {
   resize: none;
-  color: var(--orchid);
-  background-color: var(--purple);
 }
 
 .form-control {
+  font-size: 20px;
+  color: white;
   box-shadow: none!important;
   background-color: transparent!important;
 }
 
 #textarea {
-  background-color: var(--zincwhite);
-  border-top: 1px solid var(--thistle);
+  border-top: 1px solid var(--palepurple);
 }
 
 .jumbotron {
   text-align: center;
   background-color: transparent;
-  color: var(--orchid);
+  color: var(--purple);
   border-radius: 0;
-  border-bottom: 3px solid var(--orchid);
+  border-bottom: 1px solid var(--orchid);
 }
 
 .lead-custom {
   font-size: 1.5rem;
-  color: var(--purple);
+  color: var(--graypurple);
 }
-
-/* .description {
-  white-space: pre-wrap;
-} */
-
 
 .hour {
   color: var(--orchid);
@@ -57,24 +51,24 @@ textarea {
   text-align: right;
 }
 
-/* .past {
-  background-color: var(--thistle);
+.past {
+  background-color: var(--lightpurple);
 }
 
 .present {
-  background-color: var(--bubblegum);
+  background-color: var(--graypurple);
 }
 
 .future {
-  background-color: var(--hotpink);
-} */
+  background-color: var(--purple);
+} 
 
 .saveBtn {
-  border-left: 1px solid black;
+  border-left: 1px solid var(--orchid);
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
   background-color: var(--orchid);
-  color: var(--zincwhite);
+  color: #fff;
   padding: 22px;
   margin-left: -10px;
 }
