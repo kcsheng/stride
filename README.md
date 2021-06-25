@@ -1,11 +1,12 @@
-Stride is a day planner that allows a user to save tasks for each hour. Click here to access the planner.
+Stride is a day planner that allows a user to save tasks on an hourly basis. Click here to access the planner.
 
 ### Feature
 ____
 - Current day and time display
 - Color coded time-blocks (past, present and future)
 - Memorised events for the day
-- Self-refresh start for each day
+- Task refresh option
+- full responsive, utilizing bootstrap for underlying design
 
 ### Wireframe
 ____
