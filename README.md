@@ -9,6 +9,6 @@ ____
 
 ### Wireframe
 ____
-Inital wireframe for the project:
+Inital wireframe for the project: <br>
 ![wireframe plan for stride](./assets/img/wireframe.png)
 
