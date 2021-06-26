@@ -43,31 +43,29 @@ function populateForm() {
   }
 }
 
-function coloriseTimeBlocks() {
-  console.log(allHourElements)
-  setInterval(() => {
-    allHourElements.forEach((element) => {
-      let hour = element.dataset.hour;
-      currentHourIn24 = moment().format("hh");
-      let nextElement = element.nextElementSibling
-      if(hour > currentHourIn24) {
-        nextElement.classList.add("future");
-      } else if(hour == currentHour) {
-        nextElement.classList.add("present");
-      } else {
-        nextElement.classList.add("past");
-      }
-    });
+function paintTimeBlocks() {
+  setInterval(colouriseEachTimeBlock, 1000);
+}
 
-    
-  },1000);
-  
+function colouriseEachTimeBlock() {
+  allHourElements.forEach((element) => {
+    let hour = parseInt(element.dataset.hour);
+    currentHourIn24 = parseInt(moment().format("hh"));
+    let nextElement = element.nextElementSibling
+    if(hour < currentHourIn24) {
+      nextElement.classList.add("past");
+    } else if(hour == currentHourIn24) {
+      nextElement.classList.add("present");
+    } else {
+      nextElement.classList.add("future");
+    }
+  });  
 }
 
 function init() {
   showLiveTime();
   populateForm();
-  coloriseTimeBlocks();
+  paintTimeBlocks();
 }
 
 init();

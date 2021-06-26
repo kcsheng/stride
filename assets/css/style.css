@@ -51,7 +51,7 @@ textarea {
   text-align: right;
 }
 
-.past {
+.future {
   background-color: var(--lightpurple);
 }
 
@@ -59,7 +59,7 @@ textarea {
   background-color: var(--graypurple);
 }
 
-.future {
+.past {
   background-color: var(--purple);
 } 
 
@@ -71,6 +71,11 @@ textarea {
   color: #fff;
   padding: 22px;
   margin-left: -10px;
+}
+
+.saveBtn:focus {
+  outline: none;
+  box-shadow: none;
 }
 
 .saveBtn i:hover {
