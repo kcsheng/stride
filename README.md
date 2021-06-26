@@ -1,4 +1,4 @@
-Stride is a day planner that allows a user to save tasks on an hourly basis. Click here to access the planner.
+Stride is a day planner that allows a user to save tasks daily on an hourly basis. Click here to access the planner.
 
 ### Feature
 ____
