@@ -23,7 +23,7 @@ function populateForm() {
     let newRow = `
         <div class="form-row">
           <div class="col-2 hour" id="time" data-hour="${i}">${i}</div>
-          <div class="col-8" id="textarea"><textarea class="form-control text-white border-0" id="tasks" name="tasks"></textarea></div>
+          <div class="col-8" id="textarea"><textarea class="form-control text-white border-0" id="tasks"></textarea></div>
           <div class="col-2" id="btn"><button class="saveBtn" id="save-btn"><i class="fas fa-save fa-2x" id="save-icon"></i></button></div>
         </div>`
       result += newRow;
@@ -72,9 +72,6 @@ function init() {
 init();
 
 // Task storage and event handling
-const saveBtn = $("#save-btn");
-const saveIcon = $("#save-icon");
-const textArea = $("textarea#tasks");
 $(containerElement).on("click", "button", storeTasks);
 function storeTasks(e) {
   e.preventDefault();
