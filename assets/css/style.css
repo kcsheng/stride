@@ -51,15 +51,15 @@ textarea {
   text-align: right;
 }
 
-.future {
+.past {
   background-color: var(--lightpurple);
 }
 
-.present {
+.future {
   background-color: var(--graypurple);
 }
 
-.past {
+.present {
   background-color: var(--purple);
 } 
 

@@ -5,7 +5,7 @@ ____
 - Current day and time display
 - Color coded time-blocks (past, present and future)
 - Memorised events for the day
-- Task refresh option
+- Task update
 - Fullly responsive, utilizing bootstrap for underlying queries
 
 ### Wireframe

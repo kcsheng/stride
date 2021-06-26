@@ -4,6 +4,7 @@ const containerElement = document.querySelector(".container")
 let currentHourIn24;
 let allHourElements;
 
+
 function getCurrentTime() {
   let currentDay = moment().format("dddd, MMMM Do");
   let currentTime = moment().format("h:mm:ss a");
@@ -15,16 +16,15 @@ function showLiveTime() {
   setInterval(getCurrentTime, 1000);
 }
 
-// Populate 9 hour time slots, place time in dataset as a hook
+// Populate 9 hour time slots, place timepoint in dataset as a hook
 function populateForm() {
   let result = ``;
   for(let i = 9; i <= 17; i++) {
-    let newRow = ``;
-      newRow = `
+    let newRow = `
         <div class="form-row">
           <div class="col-2 hour" id="time" data-hour="${i}">${i}</div>
           <div class="col-8" id="textarea"><textarea class="form-control text-white border-0" id="tasks" name="tasks"></textarea></div>
-          <div class="col-2" id="btn"><button class="saveBtn" id="save-btn"><i class="fas fa-save fa-2x"></i></button></div>
+          <div class="col-2" id="btn"><button class="saveBtn" id="save-btn"><i class="fas fa-save fa-2x" id="save-icon"></i></button></div>
         </div>`
       result += newRow;
     } 
@@ -50,7 +50,7 @@ function paintTimeBlocks() {
 function colouriseEachTimeBlock() {
   allHourElements.forEach((element) => {
     let hour = parseInt(element.dataset.hour);
-    currentHourIn24 = parseInt(moment().format("hh"));
+    currentHourIn24 = parseInt(moment().format("HH"))
     let nextElement = element.nextElementSibling
     if(hour < currentHourIn24) {
       nextElement.classList.add("past");
@@ -62,6 +62,7 @@ function colouriseEachTimeBlock() {
   });  
 }
 
+// Program initiation
 function init() {
   showLiveTime();
   populateForm();
@@ -69,3 +70,38 @@ function init() {
 }
 
 init();
+
+// Task storage and event handling
+const saveBtn = $("#save-btn");
+const saveIcon = $("#save-icon");
+const textArea = $("textarea#tasks");
+$(containerElement).on("click", "button", storeTasks);
+function storeTasks(e) {
+  e.preventDefault();
+  let target = $(e.target);
+  // Traverse to find the corresponding time element 
+  let targetTimeElement = target.closest(".form-row").children("#time");
+  let timeAtSave = targetTimeElement.attr("data-hour");
+  // Traverse to find the textarea that may contain tasks
+  let targetTextArea = targetTimeElement.next().find("textarea#tasks");
+  let targetTextAreaValue = targetTextArea.val();
+  // Write tasks to local storage
+  if(targetTextAreaValue) {
+      localStorage.setItem(timeAtSave, targetTextAreaValue);
+  }
+}
+
+function showTasks() {
+  for(let i = 0; i < localStorage.length; i++) {
+    let timePoint = localStorage.key(i);
+    let textValue = localStorage.getItem(timePoint);
+    allHourElements = document.querySelectorAll("#time");
+    allHourElements.forEach((element) => {
+      // Reverse dom traversal 
+      if(element.dataset.hour === timePoint) {
+        element.nextElementSibling.firstChild.innerText = textValue;
+      }
+    })
+  }
+}
+showTasks();
