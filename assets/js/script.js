@@ -15,7 +15,7 @@ function showLiveTime() {
   setInterval(getCurrentTime, 1000);
 }
 
-// Populate 9 hour time slots
+// Populate 9 hour time slots, place time in dataset as a hook
 function populateForm() {
   let result = ``;
   for(let i = 9; i <= 17; i++) {
