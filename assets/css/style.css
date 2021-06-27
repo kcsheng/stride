@@ -82,3 +82,7 @@ textarea {
   outline: none;
   box-shadow: none;
 }
+
+.save-message {
+  display: none;
+}

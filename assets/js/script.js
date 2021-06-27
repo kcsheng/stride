@@ -85,6 +85,7 @@ function storeTasks(e) {
   // Write tasks to local storage
   if (targetTextAreaValue) {
     localStorage.setItem(timeAtSave, targetTextAreaValue);
+    $("#save").dialog();
   }
 }
 
