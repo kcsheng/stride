@@ -22,6 +22,7 @@ Inital wireframe for the project: <br>
 ---
 
 ![Screenshot for the final release](./assets/img/stride.png)
+![Screenshot for confirmation upon save](./assets/img/confirm-save.png)
 
 ### DRY
 
