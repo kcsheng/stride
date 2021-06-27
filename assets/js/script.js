@@ -66,6 +66,7 @@ function init() {
   showLiveTime();
   populateForm();
   paintTimeBlocks();
+  showTasks();
 }
 
 init();
@@ -100,4 +101,9 @@ function showTasks() {
     });
   }
 }
-showTasks();
+// Clear data
+const clearBtn = $("#clear-btn");
+clearBtn.on("click", () => {
+  localStorage.clear();
+  init();
+});
