@@ -19,6 +19,8 @@ Inital wireframe for the project: <br>
 
 ### Final implementation
 
+---
+
 ![Screenshot for the final release](./assets/img/stride.png)
 
 ### DRY
