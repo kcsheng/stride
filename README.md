@@ -17,6 +17,10 @@ Stride is a day planner that allows a user to save daily tasks on an hourly basi
 Inital wireframe for the project: <br>
 ![wireframe plan for stride](./assets/img/wireframe.png)
 
+### Final implementation
+
+![Screenshot for the final release](./assets/img/stride.png)
+
 ### DRY
 
 ---
