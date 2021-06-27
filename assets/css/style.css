@@ -1,4 +1,4 @@
-:root{
+:root {
   --mediumpurple: #663a82;
   --purple: #52307c;
   --graypurple: #7c5295;
@@ -8,12 +8,11 @@
 }
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 16px;
   line-height: 1;
   padding-bottom: 50px;
 }
-
 
 textarea {
   resize: none;
@@ -22,8 +21,8 @@ textarea {
 .form-control {
   font-size: 20px;
   color: white;
-  box-shadow: none!important;
-  background-color: transparent!important;
+  box-shadow: none !important;
+  background-color: transparent !important;
 }
 
 #textarea {
@@ -61,7 +60,7 @@ textarea {
 
 .present {
   background-color: var(--purple);
-} 
+}
 
 .saveBtn {
   border-left: 1px solid var(--orchid);
@@ -78,4 +77,3 @@ textarea {
   outline: none;
   box-shadow: none;
 }
-
