@@ -92,7 +92,6 @@ function showTasks() {
   for (let i = 0; i < localStorage.length; i++) {
     let timePoint = localStorage.key(i);
     let textValue = localStorage.getItem(timePoint);
-    allHourElements = document.querySelectorAll("#time");
     allHourElements.forEach((element) => {
       // Reverse dom traversal
       if (element.dataset.hour === timePoint) {
